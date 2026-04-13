@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ChatGPT Sidebar</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .fallback {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .fallback.show {
+      display: block;
+    }
+  </style>
+  <script src="sidebar.js"></script>
+</head>
+<body>
+  <iframe id="ChatGPT" src="https://chatgpt.com/" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" allow="camera; microphone; geolocation; payment; usb; serial; bluetooth; magnetometer; gyroscope; accelerometer; display-capture"></iframe>
+  <div id="fallback" class="fallback">
+    <h3>ChatGPT Sidebar</h3>
+    <p>If you're seeing this message, there may be an issue loading ChatGPT.</p>
+    <p>Try refreshing the extension or check your internet connection.</p>
+    <button onclick="location.reload()">Retry</button>
+  </div>
+</body>
+</html>
